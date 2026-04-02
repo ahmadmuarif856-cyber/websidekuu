@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - Alifian Fareza Muarif</title>
+    <style>
+        body {
+            background-color: #64d3ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #000;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .line {
+            width: 350px;
+            height: 2px;
+            background-color: #000;
+            margin: 0 auto 30px auto;
+        }
+
+        .welcome-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .foto-container img {
+            width: 200px;
+            height: auto;
+            border: 1px solid #000;
+            display: block;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #000;
+        }
+
+        th {
+            padding: 10px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        a {
+            color: #0000EE;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page1" class="container">
+        <h1>Selamat Datang</h1>
+        <div class="line"></div>
+
+        <p class="welcome-text">Selamat berkunjung!</p>
+        <p class="description">
+            Ini adalah website pertama saya, saya membuatnya berdasarkan belajar di Lab dan saya membuat web ini dengan menggunakan bahasa pemrograman HTML.<br>
+            Nama saya : <a onclick="showPage('page2')">Alifian Fareza Muarif</a>
+        </p>
+
+        <p>
+            <a onclick="showPage('page2')">Ini adalah link menuju biodata saya</a>
+        </p>
+    </div>
+
+    <div id="page2" class="container hidden">
+        <h1>Biodata Saya</h1>
+        <div class="line"></div>
+
+        <div class="foto-container">
+            <img src="gambar/foto1.jpeg">
+        </div>
+
+        <p><strong>Nama</strong> : Alifian Fareza Muarif</p>
+        <p><strong>Umur</strong> : 20 tahun</p>
+        <p>Sertakan biodata secara lengkap disini...</p>
+
+        <p style="margin-top: 25px; font-weight: bold; text-decoration: underline;">Riwayat Pendidikan</p>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 60%;">Nama Sekolah</th>
+                    <th style="width: 40%;">Tahun Kelulusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SMA NEGERI 1 BABAT</td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin-top: 40px;">
+            <a onclick="showPage('page1')">kembali</a>
+        </p>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.add('hidden');
+            
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
